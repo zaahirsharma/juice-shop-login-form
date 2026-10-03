@@ -1,0 +1,55 @@
+:root {
+  --color-page: #edf1f3;
+  --color-surface: #ffffff;
+  --color-ink: #263238;
+  --color-muted: #4c606a;
+  --color-brand: #455a64;
+  --color-accent: #d5edab;
+  --color-error: #a32424;
+  --color-border: #80929b;
+  --color-focus: #1a5fb4;
+  --color-scroll-thumb: #607d8b;
+  --color-scroll-track: #e2e9ed;
+  --radius-card: 12px;
+  --radius-control: 6px;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-display: "Trebuchet MS", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html {
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--color-scroll-thumb) var(--color-scroll-track);
+  scrollbar-width: auto;
+}
+body { margin: 0; background: var(--color-page); color: var(--color-ink); font: 16px/1.5 var(--font-body); }
+header { display: flex; align-items: center; gap: 12px; padding: 16px 24px; background: var(--color-brand); color: var(--color-surface); font-weight: bold; }
+header small { display: block; font-weight: normal; font-size: 12px; }
+.brand-mark { display: grid; place-items: center; width: 40px; height: 40px; background: var(--color-accent); color: var(--color-ink); border-radius: 50%; font: bold 27px var(--font-display); }
+main { padding: 40px 16px; }
+.login-card { width: min(100%, 440px); margin: auto; padding: 32px; background: var(--color-surface); border: 1px solid var(--color-border); border-top: 5px solid var(--color-accent); border-radius: var(--radius-card); }
+.eyebrow { margin: 0; color: var(--color-muted); font-size: 13px; }
+h1 { margin: 2px 0 6px; font: bold 36px/1.2 var(--font-display); }
+.intro { margin: 0 0 24px; color: var(--color-muted); }
+label { display: block; margin-bottom: 6px; font-weight: bold; }
+input { width: 100%; min-height: 46px; border: 1px solid var(--color-border); border-radius: var(--radius-control); padding: 10px 12px; font: inherit; color: var(--color-ink); background: var(--color-surface); }
+input[aria-invalid="true"] { border-color: var(--color-error); }
+.password-field { position: relative; }
+.password-field input { padding-right: 78px; }
+button { cursor: pointer; font: bold 16px var(--font-body); border-radius: var(--radius-control); }
+.secondary { position: absolute; right: 3px; top: 3px; min-width: 68px; height: 40px; border: none; background: var(--color-surface); color: var(--color-brand); }
+.secondary:hover { background: var(--color-page); }
+.primary { width: 100%; min-height: 46px; border: none; background: var(--color-brand); color: var(--color-surface); }
+.primary:hover { background: var(--color-ink); }
+button:active { opacity: .85; }
+button:disabled { cursor: wait; opacity: .7; }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.field-error { min-height: 24px; margin: 3px 0 12px; color: var(--color-error); font-size: 13px; }
+.help { margin: 5px 0 0; color: var(--color-muted); font-size: 13px; }
+#feedback { min-height: 102px; margin-top: 14px; overflow-wrap: anywhere; }
+#status { margin: 0 0 5px; font-weight: bold; }
+#submitted-email { margin: 0; color: var(--color-muted); font-size: 13px; }
+aside { padding: 16px; background: var(--color-page); border-radius: var(--radius-control); font-size: 14px; overflow-wrap: anywhere; }
+aside p { margin: 6px 0; }
+code { font-family: monospace; }
+@media (max-width: 480px) { main { padding: 24px 12px; } .login-card { padding: 24px 20px; } }
+@media (forced-colors: active) { html { scrollbar-color: auto; } button { border: 1px solid ButtonText; } }

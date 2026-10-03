@@ -1,0 +1,16 @@
+{
+  "name": "juice-shop-login-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local login demonstration with browser and server validation",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js",
+    "lint": "standard server.js public/*.js test/*.js",
+    "check": "node --check server.js && node --check public/app.js && node --check public/validation.js"
+  },
+  "engines": { "node": ">=22.16.0" },
+  "dependencies": { "bcryptjs": "3.0.2" },
+  "devDependencies": { "jsdom": "26.1.0", "standard": "17.1.2" }
+}
